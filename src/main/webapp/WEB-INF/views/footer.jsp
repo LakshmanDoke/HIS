@@ -59,13 +59,6 @@
     </div>
   </footer>
   <!--/ footer-->
-
-  <script src="/resources/js/jquery.min.js"></script>
-  <script src="/resources/js/jquery.easing.min.js"></script>
-  <script src="/resources/js/bootstrap.min.js"></script>
-  <script src="/resources/js/custom.js"></script>
-  <script src="/resources/contactform/contactform.js"></script>
-
 </body>
 
 </html>

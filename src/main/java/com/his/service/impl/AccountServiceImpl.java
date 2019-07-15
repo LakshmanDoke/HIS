@@ -1,12 +1,13 @@
 package com.his.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.his.model.AccountEntity;
 import com.his.repository.AccountEntityRepository;
 import com.his.service.AccountService;
-@Repository
+
+@Service
 public class AccountServiceImpl implements AccountService {
 	@Autowired
 	AccountEntityRepository accountEntityRepository;
@@ -17,5 +18,10 @@ public class AccountServiceImpl implements AccountService {
 		return accountEntity.getAcId();
 	}
 
+	@Override
+	public Iterable<AccountEntity> getAllAccount() {
+
+		return accountEntityRepository.findAll();
+	}
+
 }
-	

@@ -2,7 +2,7 @@
 <html><head>
 <script>
 function myFunction() {
-	 window.location = "http://localhost:8080/his/about#about";
+	 window.location = "#about";
 }
 </script>
 

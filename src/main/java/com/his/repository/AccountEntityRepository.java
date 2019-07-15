@@ -13,5 +13,8 @@ public interface AccountEntityRepository extends CrudRepository<AccountEntity, I
 
 	@Query(nativeQuery = true, value = "select roles from RoleMaster")
 	public List<String> getRole();
+	
+	
+	public List<AccountEntity> findByEmail(String email);
 
 }

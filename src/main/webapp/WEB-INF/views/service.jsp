@@ -3,7 +3,7 @@
 <head>
 <script>
 function myFunction() {
-	 window.location = "http://localhost:8080/his/service#service";
+	 window.location = "#service";
 }
 </script>
 
@@ -36,7 +36,7 @@ function myFunction() {
               <i class="fa fa-ambulance"></i>
             </div>
             <div class="icon-info">
-              <h4>Emergency Services</h4>
+              <h4><a href="accountdata">Account Data</a></h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
@@ -47,7 +47,7 @@ function myFunction() {
               <i class="fa fa-user-md"></i>
             </div>
             <div class="icon-info">
-              <h4>Medical Counseling</h4>
+              <h4><a href="createPlan">Plan Creation</a></h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>

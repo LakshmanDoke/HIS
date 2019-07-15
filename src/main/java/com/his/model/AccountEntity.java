@@ -20,8 +20,8 @@ public class AccountEntity {
 	String dob;
 	String email;
 	String password;
-	Integer ssnNo;
-	Integer mobileNo;
+	Long ssnNo;
+	Long mobileNo;
 	String role;
 
 	public Integer getAcId() {
@@ -80,28 +80,30 @@ public class AccountEntity {
 		this.password = password;
 	}
 
-	public Integer getSsnNo() {
+	public String getRole() {
+		return role;
+	}
+
+	public Long getSsnNo() {
 		return ssnNo;
 	}
 
-	public void setSsnNo(Integer ssnNo) {
+	public void setSsnNo(Long ssnNo) {
 		this.ssnNo = ssnNo;
 	}
 
-	public Integer getMobileNo() {
+	public Long getMobileNo() {
 		return mobileNo;
 	}
 
-	public void setMobileNo(Integer mobileNo) {
+	public void setMobileNo(Long mobileNo) {
 		this.mobileNo = mobileNo;
-	}
-
-	public String getRole() {
-		return role;
 	}
 
 	public void setRole(String role) {
 		this.role = role;
 	}
+
+	 
 
 }

@@ -1,8 +1,6 @@
 package com.his.model;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import lombok.Data;
@@ -11,7 +9,7 @@ import lombok.Data;
 @Data
 public class AccountModel {
 	@Id
-	
+
 	Integer acId;
 	String firstName;
 	String lastName;
@@ -19,8 +17,8 @@ public class AccountModel {
 	String dob;
 	String email;
 	String password;
-	Integer ssnNo;
-	Integer mobileNo;
+	Long ssnNo;
+	Long mobileNo;
 	String role;
-
 }
+

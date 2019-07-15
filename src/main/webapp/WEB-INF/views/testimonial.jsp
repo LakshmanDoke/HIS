@@ -3,7 +3,7 @@
 <head>
 <script>
 	function myFunction() {
-		window.location = "http://localhost:8080/his/testimonial#testimonial";
+		window.location = "#testimonial";
 	}
 </script>
 

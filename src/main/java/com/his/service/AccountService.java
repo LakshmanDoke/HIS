@@ -10,4 +10,6 @@ public interface AccountService {
 	@Transactional
 	Integer saveAccount(AccountEntity accountEntity);
 
+	public Iterable<AccountEntity> getAllAccount();
+
 }
