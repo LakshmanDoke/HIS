@@ -1,17 +1,23 @@
 package com.his.model;
 
-import javax.persistence.Entity;
 import javax.persistence.Id;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Entity
+/**
+ * This is model class for plan creation .
+ * 
+ * @author laksh
+ *
+ */
 @Data
+@NoArgsConstructor
 public class PlanModel {
 	@Id
-	Integer planId;
-	String planName;
-	String startDate;
-	String planDesc;
-	String endDate;
+	private Integer planId;
+	private String planName;
+	private String startDate;
+	private String planDesc;
+	private String endDate;
 }

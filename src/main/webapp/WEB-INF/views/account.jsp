@@ -2,6 +2,11 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<style type="text/css">
+html {
+  scroll-behavior: smooth;
+}
+</style>
 <link href="/resources/css/styleaccpage.css" rel='stylesheet'
 	type='text/css' />
 
@@ -18,9 +23,9 @@
 <script src="/resources/js/emailvalidation.js"></script>
 
 <script>
-	function myFunction() {
-		window.location = "#account";
-	}
+function myFunction() {
+	 window.scrollTo(0, 700);
+}
 </script>
 </head>
 <jsp:include page="header.jsp"></jsp:include>

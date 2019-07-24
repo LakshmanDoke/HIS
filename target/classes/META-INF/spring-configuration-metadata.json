@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "",
+      "type": "com.his.util.AppProperties",
+      "sourceType": "com.his.util.AppProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "mainexception",
+      "type": "java.lang.String",
+      "sourceType": "com.his.util.AppProperties"
+    },
+    {
+      "name": "rootpath",
+      "type": "java.lang.String",
+      "sourceType": "com.his.util.AppProperties"
+    }
+  ],
+  "hints": []
+}

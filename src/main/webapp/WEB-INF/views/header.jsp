@@ -5,6 +5,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Medilab Free Bootstrap HTML5 Template</title>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
 <meta name="description"
 	content="Free Bootstrap Theme by BootstrapMade.com">
 <meta name="keywords"
@@ -17,12 +25,6 @@
 <link rel="stylesheet" type="text/css"
 	href="/resources/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/resources/css/style.css">
-<!-- =======================================================
-    Theme Name: Medilab
-    Theme URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
-    Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
-  ======================================================= -->
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar"
@@ -49,7 +51,8 @@
 								<li class=""><a href="service">Services</a></li>
 								<li class=""><a href="about">About</a></li>
 								<li class=""><a href="testimonial">Testimonial</a></li>
-								<li class=""><a href="contact"  >Contact</a></li>
+								<li class=""><a href="contact">Contact</a></li>
+								<li class=""><a href="login">Login</a></li>
 							</ul>
 						</div>
 					</div>

@@ -1,8 +1,13 @@
 <html>
 <head>
+<style type="text/css">
+html {
+  scroll-behavior: smooth;
+}
+</style>
 <script>
 function myFunction() {
-	 window.location = "#contact";
+	 window.scrollTo(0, 600);
 }
 </script>
 </head>

@@ -8,21 +8,35 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+/**
+ * This is entity class for account data handling .
+ * 
+ * @author laksh
+ *
+ */
 @Entity
 @Table(name = "AccountMaster")
+@NoArgsConstructor
 public class AccountEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	Integer acId;
-	String firstName;
-	String lastName;
-	String gender;
-	String dob;
-	String email;
-	String password;
-	Long ssnNo;
-	Long mobileNo;
-	String role;
+	private Integer acId;
+	private String firstName;
+	private String lastName;
+	private String gender;
+	private String dob;
+	private String email;
+	private String password;
+	private Long ssnNo;
+	private Long mobileNo;
+	private String role;
+	@Getter
+	@Setter
+	private Character status;
 
 	public Integer getAcId() {
 		return acId;
@@ -88,7 +102,7 @@ public class AccountEntity {
 		return ssnNo;
 	}
 
-	public void setSsnNo(Long ssnNo) {
+	public void setSsnNo(final Long ssnNo) {
 		this.ssnNo = ssnNo;
 	}
 
@@ -103,7 +117,5 @@ public class AccountEntity {
 	public void setRole(String role) {
 		this.role = role;
 	}
-
-	 
 
 }

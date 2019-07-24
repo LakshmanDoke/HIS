@@ -14,20 +14,46 @@
 	src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 
 <script src="/resources/js/jquerydatatable.js"></script>
+<script src="/resources/js/charstatus.js"></script>
 
+<style type="text/css">
+html {
+	scroll-behavior: smooth;
+}
+</style>
+ 
 <script>
-	function myFunction() {
-		window.location = "#account";
+	function confirmDelete() {
+		var status = confirm("Are you sure, you want to Delete?");
+		if (status) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	function confirmActivate() {
+		var status = confirm("Are you sure, you want to Activate?");
+		if (status) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 </script>
+<script>
+$(document).ready(function(){
+	window.scrollTo(0, 600);
+});
+</script>
+
 </head>
 
 <jsp:include page="header.jsp"></jsp:include>
-<body onload="myFunction()">
+<body >
 	<section id="account" class="section-padding">
-	<br>
+		<br>
 		<div>
-			<table id="table_id" class="display">
+			<table id="accountdata" class="display">
 				<thead>
 					<tr>
 						<th>Ac Id</th>
@@ -39,31 +65,60 @@
 						<th>SSN</th>
 						<th>Mobile No</th>
 						<th>Role</th>
-
-
+						<th>Action</th>
 					</tr>
 				</thead>
 				<tbody>
 					<c:forEach items="${acc }" var="accvar">
 						<tr>
-							<td>${accvar.acId }</td>
-							<td>${accvar.firstName }</td>
-							<td>${accvar.lastName }</td>
-							<td>${accvar.gender }</td>
-							<td>${accvar.email }</td>
-							<td>${accvar.dob }</td>
-							<td>${accvar.ssnNo }</td>
-							<td>${accvar.mobileNo }</td>
-							<td>${accvar.role }</td>
+							<td><c:out value="${accvar.acId}"></c:out></td>
+							<td><c:out value="${accvar.firstName }"></c:out></td>
+							<td><c:out value="${accvar.lastName }"></c:out></td>
+							<td><c:out value="${accvar.gender }"></c:out></td>
+							<td class="email"><c:out value="${accvar.email }"></c:out></td>
+							<td><c:out value="${accvar.dob }"></c:out></td>
+							<td><c:out value="${accvar.ssnNo }"></c:out></td>
+							<td><c:out value="${accvar.mobileNo }"></c:out></td>
+							<td><c:out value="${accvar.role }"></c:out></td>
+							<td>
+								<button type="button" id="edit" class="btn btn-default btn-sm">
+									<span class="glyphicon glyphicon-edit"></span> Edit
+								</button> 
+								
+								
+								
+								<c:if test="${accvar.status.toString() eq 'Y' }">
+								
+									<a href="deleteCwProfile/<c:out value="${accvar.email }"/>"
+										title="Activate" onclick="return confirmDelete()">
+										<button type="button" class="btn btn-default btn-sm">
+											<span class="glyphicon glyphicon-trash"></span> Delete
+										</button>
+									</a>
+
+								</c:if> <c:if test="${accvar.status.toString() eq 'N' }">
+
+									<a href="activateCwProfile/<c:out value="${accvar.email }"/>"
+										title="Delete" onclick="return confirmActivate()">
+										<button type="button" id="activate"
+											class="btn btn-default btn-sm">
+											<span class="glyphicon glyphicon-tasks"></span> Activate
+										</button>
+									</a>
+								</c:if>
+							</td>
+
 						</tr>
-
 					</c:forEach>
-
 				</tbody>
 			</table>
 		</div>
 	</section>
+
+	<button onclick="reffun();">press me</button>
 	<jsp:include page="footer.jsp"></jsp:include>
+
+
 </body>
 
 </html>

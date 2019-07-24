@@ -2,6 +2,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+
 <link href="/resources/css/styleaccpage.css" rel='stylesheet'
 	type='text/css' />
 
@@ -13,10 +14,16 @@
 
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="/resources/js/plandatepicker.js"></script>
+<style type="text/css">
+html {
+	scroll-behavior: smooth;
+}
+</style>
 
 <script>
 	function myFunction() {
-		window.location = "#account";
+
+		window.scrollTo(0, 600);
 	}
 </script>
 </head>
@@ -33,7 +40,7 @@
 		<div class="bg-agile">
 			<div class="book-appointment">
 				<h2>Plan Information</h2>
-				<font color="green">${id }</font>
+				<font color="green">${msg }</font>
 				<form:form action="saveplan" method="post" modelAttribute="planform">
 					<div class="left-agileits-w3layouts same">
 						<div class="gaps">

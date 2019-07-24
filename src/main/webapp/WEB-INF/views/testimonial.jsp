@@ -1,9 +1,14 @@
 
 <html>
 <head>
+<style type="text/css">
+html {
+  scroll-behavior: smooth;
+}
+</style>
 <script>
 	function myFunction() {
-		window.location = "#testimonial";
+		 window.scrollTo(0, 600);
 	}
 </script>
 
